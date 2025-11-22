@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- A definição do idioma é crucial para acessibilidade e SEO. -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- A tag viewport é essencial para um design responsivo correto. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalha Tática de Vorlag - ALPHA</title>
+    <!-- Links para CSS e JS. 'defer' otimiza o carregamento da página. -->
+    <link rel="stylesheet" href="style.css"> 
+    <script src="theme.js" defer></script>
+    <script src="game_app.js" defer></script>
+</head>
+<body>
+    <!-- Barra de navegação principal, consistente em todas as páginas. -->
+    <nav class="taskbar">
+        <button id="theme-toggle">☀️/🌙</button>
+        <!-- CORREÇÃO: Removido espaço em branco do href e padronizada a capitalização dos links. -->
+        <a href="index.html">Ínicio</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="grimorio.html">Grimório</a>
+        <a href="game.html">Game</a>
+    </nav>
+
+    <!-- MELHORIA SEMÂNTICA: Adicionada a estrutura header/main/footer. -->
+    <header>
+        <h1>Simulador Tático de Dados</h1>
+    </header>
+
+    <main>
+        <div class="container-game">
+            <p>Aplicando as Regras de Sobrevivência de Vorlag (Conforme Pág. 31 do Grimório).</p>
+            <button id="btn-iniciar-combate" class="btn-d20">⚔️ Rolar D20 (Iniciar Combate)</button>
+            <div id="log-combate" class="log-combate">
+                <div class="log-entry">>> O destino de Vorlag aguarda sua decisão. Clique para testar as regras de Crítico/Falha Crítica.</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-clean">
+        <p>Desenvolvido por Maria Luciana | Imersão Dev com Google Gemini & Alura</p>
+    </footer>
+</body>
+</html>

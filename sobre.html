@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- A definição do idioma é crucial para acessibilidade e SEO. -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- A tag viewport é essencial para um design responsivo correto em dispositivos móveis. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o Arquivo Arcano</title>
+
+    <!-- Link para a folha de estilo principal. -->
+    <link rel="stylesheet" href="style.css">
+    <!-- O script de tema é carregado com 'defer' para não bloquear a renderização da página. -->
+    <script src="theme.js" defer></script>
+</head>
+<body>
+
+    <!-- Barra de navegação principal, consistente em todas as páginas. -->
+    <nav class="taskbar">
+        <button id="theme-toggle">☀️/🌙</button>
+        <!-- CORREÇÃO: Removido espaço em branco do href e padronizada a capitalização dos links. -->
+        <a href="index.html">Ínicio</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="grimorio.html">Grimório</a>
+        <a href="game.html">Game</a>
+    </nav>
+
+    <!-- Cabeçalho principal da página. -->
+    <header>
+        <h1>Sobre o Desenvolvimento do Arquivo Arcano</h1>
+    </header>
+
+    <!-- Conteúdo principal da página "Sobre". -->
+    <main>
+        <!-- A tag <article> é semanticamente ideal para um bloco de texto autocontido como este. -->
+        <article class="container-texto">
+            <section>
+                <h2>Um Projeto Forjado na Imersão Alura</h2>
+                <p>
+                    O "Arquivo Arcano" nasceu como um projeto para a Imersão de Desenvolvimento Front-End da Alura, em parceria com o Google. O desafio era criar uma aplicação web interativa, e a ideia foi construir um bestiário/compêndio para o universo de fantasia de "Lendas de Vorlag".
+                </p>
+            </section>
+            <section>
+                <h2>A Aliança com a IA Gemini</h2>
+                <p>
+                    Uma peça fundamental neste desenvolvimento foi a utilização da IA Gemini. Ela atuou como uma verdadeira parceira de programação (pair programming), auxiliando em diversas frentes: desde a geração do lore e das descrições dos itens, passando pela estruturação do HTML semântico, criação de estilos CSS responsivos, até a refatoração e implementação da lógica em JavaScript. A capacidade da IA de entender o contexto e gerar código coeso foi crucial para a agilidade e qualidade do projeto.
+                </p>
+            </section>
+            <section>
+                <h2>Agradecimentos</h2>
+                <p>
+                    Agradeço à Alura e ao Google pela oportunidade de participar desta imersão, que proporcionou um aprendizado prático e intenso. E um agradecimento especial aos instrutores e à comunidade, cujo apoio foi essencial para superar os desafios e dar vida a este projeto.
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <!-- Rodapé padrão do site. -->
+    <footer class="footer-clean">
+        <p>Desenvolvido por Maria Luciana | Imersão Dev com Google Gemini & Alura</p>
+    </footer>
+
+</body>
+</html>

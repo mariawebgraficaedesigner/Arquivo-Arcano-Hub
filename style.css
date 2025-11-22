@@ -1,0 +1,400 @@
+/* RESET E ESTILOS GLOBAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d; /* Fundo muito escuro */
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TEMA CLARO - Para a Barra de Tarefas */
+.light-theme {
+    background-color: #f7f7f7;
+    color: #111;
+}
+
+/* HEADER E TÍTULO PRINCIPAL */
+header {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 2px solid #FFD700;
+}
+
+header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem; /* Ajustado para mobile */
+    color: #FFCC00; /* Dourado mais vibrante */
+    letter-spacing: 5px;
+    text-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
+}
+
+/* BARRA DE TAREFAS (TEMA/SOBRE) */
+.taskbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+    gap: 15px;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas pequenas */
+}
+
+.taskbar-btn, .taskbar-link {
+    background: none;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.taskbar-btn:hover, .taskbar-link:hover {
+    background-color: #222;
+    color: #FFD700;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* --- SEÇÃO HERO / BUSCA --- */
+.hero-busca {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 20px;
+}
+
+.subtitulo-hero {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Empilha na vertical em mobile */
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+/* Estilo do input e botões PADRONIZADO */
+.search-input {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    border: 1px solid #FFD700;
+    padding: 12px 20px;
+    border-radius: 8px; /* Cantos arredondados em todos os lados para mobile */
+    width: 100%;
+    max-width: 400px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.search-btn, .btn-glossario {
+    background-color: #444; 
+    color: #FFD700; 
+    border: 1px solid #FFD700;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.search-btn {
+    border-radius: 8px;
+}
+
+/* MELHORIA DE UX: Adiciona um brilho ao focar no input */
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.search-btn:hover, .btn-glossario:hover {
+    background-color: #FFD700; 
+    color: #111;
+}
+
+.btn-glossario {
+    background-color: transparent;
+    border: 1px solid #aaa;
+    color: #aaa;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+/* Fim da Estilização Padronizada */
+
+/* --- ÁREA DE RESULTADOS E CARDS --- */
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.item-resultado {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-resultado:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
+}
+
+.item-resultado img {
+    width: 100%;
+    height: 250px; /* Altura fixa para padrão */
+    object-fit: cover; /* Recorta a imagem sem distorcer */
+}
+
+.item-resultado h2 {
+    font-size: 1.3rem;
+    color: #FFD700;
+    padding: 15px 15px 0;
+}
+
+.item-resultado p.descricao-meta {
+    padding: 0 15px 10px;
+    color: #bbb;
+    flex-grow: 1; /* Garante que as tags fiquem no rodapé */
+}
+
+.item-resultado p.tags-meta {
+    padding: 0 15px 15px;
+    font-size: 0.8rem;
+}
+
+/* --- SEÇÕES HUB (LIVROS/JOGO) --- */
+.section-title {
+    color: #aaa;
+    font-size: 1.8rem;
+    padding: 40px 0 20px;
+    text-align: center;
+    border-top: 1px dashed #333;
+}
+
+/* VITRINE DE LIVROS */
+#vitrine-livros .livro-cards-container {
+    display: flex;
+    flex-direction: column; /* Empilha na vertical em mobile */
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 0;
+}
+
+.livro-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.livro-capa {
+    width: 150px;
+    height: auto;
+    border: 3px solid #FFD700;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* MELHORIA: Classe base para botões para seguir o princípio DRY (Don't Repeat Yourself) */
+.btn {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+}
+
+.btn-download-livro {
+    background-color: #38761d; /* Verde escuro - Download */
+    color: white;
+}
+
+.btn-download-livro:hover {
+    background-color: #4CAF50;
+}
+
+.btn-download-livro.placeholder {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* SEÇÃO JOGO ALPHA */
+#area-jogo {
+    padding: 60px 0;
+}
+
+.jogo-content-container {
+    display: flex;
+    flex-direction: column; /* Empilha na vertical em mobile */
+    gap: 30px;
+    padding: 25px;
+    background-color: #1a1a1a; /* Fundo de card */
+    border: 1px solid #FFD700; /* Borda dourada sutil */
+    border-radius: 12px; /* Cantos arredondados */
+}
+
+.img-jogo {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #555;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease; /* Transição suave para o hover */
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.5); /* Sombra vermelha sutil */
+}
+
+.btn-jogar {
+    background-color: #8b0000; /* Vermelho RPG */
+}
+
+.btn-discord {
+    background-color: #7289da; /* Azul Discord */
+}
+
+/* Container para os botões da seção de jogo */
+.jogo-content-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* --- FOOTER (CONSERTO VISUAL) --- */
+.footer-clean {
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    font-size: 0.8rem;
+}
+
+/* --- RESPONSIVIDADE (MOBILE-FIRST) --- */
+/* A partir de 768px, o layout se adapta para telas maiores */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 3.5rem; /* Retorna ao tamanho original */
+    }
+
+    .search-container {
+        flex-direction: row; /* Alinha na horizontal */
+        gap: 0; /* Remove o gap para unir input e botão */
+    }
+
+    .search-input {
+        border-radius: 8px 0 0 8px;
+        width: 300px;
+    }
+
+    .search-btn {
+        border-radius: 0 8px 8px 0;
+    }
+
+    /* Vitrine de Livros */
+    #vitrine-livros .livro-cards-container {
+        flex-direction: row; /* Alinha na horizontal */
+    }
+
+    /* Seção Jogo (Imagem em cima, texto embaixo) */
+    .jogo-content-container {
+        flex-direction: row; /* Alinha na horizontal */
+        text-align: left;
+        align-items: center; /* Centraliza os itens verticalmente */
+    }
+
+    .img-jogo {
+        max-width: 350px; /* Define um tamanho máximo para a imagem no desktop */
+        flex-shrink: 0; /* Impede que a imagem encolha */
+    }
+
+    .img-jogo:hover {
+        box-shadow: 0 0 25px rgba(139, 0, 0, 0.8); /* Sombra mais intensa no hover */
+    }
+
+    /* Alinha os botões do jogo na horizontal em telas maiores */
+    .jogo-content-container > div {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+/* --- ESTILOS PÁGINA GAME --- */
+.container-game {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container-game p {
+    color: #aaa;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-d20 { 
+    background-color: #8b0000; /* Vermelho RPG */
+    color: #f0e68c; /* Khaki claro */
+    border: 2px solid #f0e68c;
+    padding: 15px 30px; 
+    cursor: pointer; 
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.btn-d20:hover {
+    background-color: #f0e68c;
+    color: #8b0000;
+}
+
+.log-combate { 
+    border: 2px solid #333; 
+    padding: 25px; 
+    margin-top: 30px; 
+    height: 350px; 
+    overflow-y: scroll; 
+    background-color: #000; 
+    text-align: left;
+    font-family: monospace;
+    border-radius: 10px;
+    color: #ccc;
+}
+
+.log-entry { margin-bottom: 10px; border-bottom: 1px dashed #333; padding-bottom: 10px; }
+.log-falha { color: red; font-weight: bold; }
+.log-sucesso-critico { color: #32CD32; font-weight: bold; }

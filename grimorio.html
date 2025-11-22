@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo Completo de Vorlag</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Os scripts são carregados com 'defer' para não bloquear a renderização do HTML. -->
+    <script src="theme.js" defer></script>
+    <script src="dados.js" defer></script>
+    <script src="grimorio_app.js" defer></script>
+</head>
+<body>
+
+    <!-- Barra de navegação principal, consistente em todas as páginas. -->
+    <nav class="taskbar">
+        <button id="theme-toggle">☀️/🌙</button>
+        <!-- CORREÇÃO: Removido espaço em branco do href e padronizada a capitalização dos links. -->
+        <a href="index.html">Ínicio</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="grimorio.html">Grimório</a>
+        <a href="game.html">Game</a>
+    </nav>
+
+    <!-- Cabeçalho principal da página. -->
+    <header>
+        <h1>Acervo Completo de Vorlag</h1>
+    </header>
+
+    <!-- Conteúdo principal da página do Grimório. -->
+    <main>
+        <!-- MELHORIA ESTRUTURAL: O filtro agora está dentro de um container para melhor estilização e organização. -->
+        <div class="filtro-container">
+            <input type="text" id="grimorio-busca" placeholder="Filtrar por nome, descrição ou tag..." class="search-input">
+        </div>
+
+        <!-- Container onde os cards do grimório serão renderizados dinamicamente pelo JavaScript. -->
+        <div id="grimorio-lista" class="container-cards">
+            <!-- O conteúdo do grimório será inserido aqui pelo grimorio_app.js -->
+        </div>
+    </main>
+
+    <!-- Rodapé padrão do site. -->
+    <footer class="footer-clean">
+        <p>Desenvolvido por Maria Luciana | Imersão Dev com Google Gemini & Alura</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- A definição do idioma é crucial para acessibilidade e SEO. -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- A tag viewport é essencial para um design responsivo correto em dispositivos móveis. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquivo Arcano - Hub Oficial</title>
+
+    <!-- Links para folhas de estilo e scripts. O 'defer' no script garante que ele seja executado após o parsing do HTML. -->
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+</head>
+<body>
+
+    <!-- Barra de navegação principal, posicionada no topo para acesso rápido. -->
+    <nav class="taskbar">
+        <button id="theme-toggle">☀️/🌙</button>
+        <!-- CORREÇÃO: Removido espaço em branco do href para garantir que o link funcione corretamente. -->
+        <a href="index.html">Ínicio</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="grimorio.html">Grimório</a>
+        <a href="game.html">Game</a>
+    </nav>
+    
+    <!-- Cabeçalho principal da página, contendo o título de maior importância (h1). -->
+    <header>
+        <h1>ARQUIVO ARCANO</h1>
+    </header>
+
+    <!-- Conteúdo principal da aplicação. -->
+    <main>
+        <!-- Seção Hero: O ponto focal inicial para o usuário, com a funcionalidade de busca. -->
+        <section class="hero-busca">
+            <h2 class="subtitulo-hero">Busque criaturas, itens ou lendas...</h2>
+            <div class="search-container">
+                <input type="text" id="caixa-busca" class="search-input" placeholder="Digite um termo ou tag...">
+                <button id="botao-busca" class="search-btn">INVESTIGAR</button>
+            </div>
+            <!-- Container para o histórico de buscas, que será populado via JavaScript. -->
+            <div id="historico-busca" class="historico-container">
+                <!-- Termos recentes aparecerão aqui -->
+            </div>
+            
+            <!-- Call-to-action secundário para a visualização completa do acervo. -->
+            <a href="grimorio.html" class="btn-glossario">
+                📜 Ver Grimório Completo
+            </a>
+        </section>
+
+        <!-- Seção de Resultados: Container dinâmico onde os cards de resultado da busca serão exibidos. -->
+        <section id="resultados-pesquisa" class="container-cards">
+            <!-- O conteúdo aqui é gerado dinamicamente pelo script.js -->
+        </section>
+
+        <!-- Seção Vitrine: Apresenta os produtos principais (livros) do universo. -->
+        <section id="vitrine-livros">
+            <h2 class="section-title">O UNIVERSO PUBLICADO</h2>
+            <div class="livro-cards-container">
+                <!-- Card individual para cada livro. -->
+                <div class="livro-card">
+                    <img src="imagens/livro-lendas.jpg" alt="Capa do livro Lendas de Vorlag" class="livro-capa">
+                    <h3>Lendas de Vorlag</h3>
+                    <p>História e criaturas do universo.</p>
+                    <!-- Botão de ação primária para o livro. -->
+                    <a href="downloads/amostra-livro.pdf" download class="btn btn-download-livro">
+                        ⬇️ Baixar Grimório (36 Páginas)
+                    </a>
+                </div>
+                
+                <div class="livro-card">
+                    <img src="imagens/livro-mestre.jpg" alt="Capa do livro O Caminho do Mestre" class="livro-capa">
+                    <h3>O Caminho do Mestre</h3>
+                    <p>Guia de regras e táticas (MVP).</p>
+                    <!-- MELHORIA SEMÂNTICA: Usar um <button> desabilitado para ações futuras é melhor para acessibilidade. -->
+                    <!-- Ele informa aos leitores de tela que a ação existe, mas não está ativa. -->
+                    <button disabled class="btn btn-download-livro placeholder">
+                        Em Breve na Amazon
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Jogo: Promove o jogo relacionado ao universo. -->
+        <section id="area-jogo">
+            <h2 class="section-title">BATALHA POR VORLAG: O JOGO</h2>
+            <div class="jogo-content-container">
+                <img src="imagens/gameplay.jpg" alt="Visão tática do jogo" class="img-jogo">
+                <div>
+                    <p>O RPG tático de turnos oficial. Use o conhecimento do Arquivo Arcano para vencer. O jogo demonstra as regras D20 da página 31 do Grimório.</p>
+                    <!-- Botões de ação para o jogo e comunidade. -->
+                    <a href="game.html" class="btn btn-jogar">
+                        🎮 Jogar Alpha Tático
+                    </a>
+                    <a href="https://discord.com" target="_blank" class="btn btn-discord">
+                        💬 Entrar no Discord
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé da página com créditos. -->
+    <footer class="footer-clean">
+        <p>Desenvolvido por Maria Luciana | Imersão Dev com Google Gemini & Alura</p>
+    </footer>
+
+    <!-- Scripts principais da aplicação. Colocados no final do body para não bloquear a renderização da página. -->
+    <script src="dados.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>
